@@ -81,11 +81,10 @@ void sum_rows(const int matrix[4][4]){
 }
 void sum_columns(const int matrix[4][4]){
     
-    for(int i=0;i<4;i++){
-        int j=0;
+    for(int j=0;j<4;j++){
         int sum=0;
-        for(j;j<4;j++){
-            sum+=matrix[j][i];
+        for(int i=0;i<4;i++){
+            sum+=matrix[i][j];
         }
         cout<<"Column: "<<j<<": "<<sum<<endl;
     }
