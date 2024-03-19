@@ -16,7 +16,7 @@ class Node{
 class LinkedList{
     public:
         Node* head;
-        Node* tail;
+
 
     public:
     LinkedList() : head(nullptr){}
