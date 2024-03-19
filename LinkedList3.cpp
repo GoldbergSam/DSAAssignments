@@ -34,20 +34,14 @@ class LinkedList{
             current->next = newNode;
         }
 
-
         void delete_divis3or5(){
 
-            if (head == nullptr) {
+            if (head == nullptr) return;
 
-                return;}
-
-            Node* curr= head;
-
-            int n = size();
             Node* temp = head;
             Node* temp1 = temp;
 
-            for(int i=0; i<n; i++){
+            while(temp!=nullptr){
                 if(temp->data %3 ==0 || temp->data %5 ==0){
                     if (temp == head){
                         head = temp->next;
