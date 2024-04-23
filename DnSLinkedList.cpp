@@ -70,21 +70,16 @@ class DoublyLinkedList{
 
     void insertp(int data, int pos){
         if(pos>size()) return;
-        Node* newNode = new Node(data);
         
         if(pos==size()){
-            newNode->pre = tail;
-            tail->next = newNode;
-            tail = newNode;
+            stack(data);
             
         }
         else if(pos==0){
-            newNode->next = head;
-            head->pre = newNode;
-            head = newNode;
-            
+            enqueue(data);
         }
         else{
+            Node* newNode = new Node(data);
             Node* temp = head;
             for(int i=0; i<pos;i++ ){
                 temp = temp->next;
@@ -189,7 +184,6 @@ class SingleLinkedList{
 
     void insertp(int data, int pos){
         if(pos>size()) return;
-        Node* newNode = new Node(data);
         
         if(pos==size()){
             sstack(data);
@@ -198,6 +192,7 @@ class SingleLinkedList{
             enqueue(data);
         }
         else{
+            Node* newNode = new Node(data);
             Node* temp = head;
             for(int i=0; i<pos-1;i++ ){
                 temp = temp->next;
