@@ -123,8 +123,8 @@ class BST{
         
         int leftData=0;
         int rightData=0;
-        root->left == nullptr ? leftData = 0 : leftData - root->left->data;
-        root->right == nullptr ? rightData = 0 : rightData - root->right->data;
+        root->left == nullptr ? leftData = 0 : leftData = root->left->data;
+        root->right == nullptr ? rightData = 0 : rightData = root->right->data;
         int left = sumHelper(root->left)+ leftData;
         int right = sumHelper(root->right)+ rightData;
 
