@@ -161,7 +161,6 @@ int main(){
     //4
     cout<<"4: "<<endl;
     tree.displayleaves();
-    return 0;
 
     //5
     cout<<"5: "<<endl;
